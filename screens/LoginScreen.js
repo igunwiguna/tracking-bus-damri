@@ -1,4 +1,4 @@
-import React from '../../../AppData/Local/Microsoft/TypeScript/2.9/node_modules/@types/react';
+import React from 'react';
 import {
     View,
     Text,    
@@ -6,7 +6,7 @@ import {
 } from 'react-native'
 import * as firebase from 'firebase';
 import { FormLabel, FormInput, FormValidationMessage } from 'react-native-elements'
-import { StackNavigator } from '../../../AppData/Local/Microsoft/TypeScript/2.9/node_modules/@types/react-navigation'
+import { StackNavigator } from 'react-navigation'
 import { Button } from 'react-native-elements'
 
 firebase.initializeApp({
@@ -77,7 +77,7 @@ export default class LoginScreen extends React.Component {
 
     render() {
         return (
-            <View style={{ flex:2}}>
+            <View style={styles.container}>
                 <Text>Login</Text>
                 <FormLabel>Email</FormLabel>
                 <FormInput
@@ -100,7 +100,9 @@ export default class LoginScreen extends React.Component {
 
 const styles = StyleSheet.create({
     container: {
-        
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     button : {
         color: '#333333'
